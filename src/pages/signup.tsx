@@ -24,7 +24,7 @@ function Signup() {
                 <InputFieldBox type="password" handleChange={handleConfirmChange} id="Confirm Password" />
                 <div className={`h-1`} />
                 <BlockBtn title={"Sign up"} action={() => signup({email, password, confirm})} />
-                <span className={`text-sm`}>Already have an account? <Link to="/login" className={`text-primary underline font-semibold`}>Login now!</Link></span>
+                <span className={`text-sm text-text`}>Already have an account? <Link to="/login" className={`text-primary underline font-semibold`}>Login now!</Link></span>
             </div>
             <div className={`hidden lg:flex justify-center items-center`}>
                 <img src="/Walk in the city-rafiki.png" alt="Hello" className={`w-100`}/>

@@ -21,7 +21,7 @@ function Login() {
                 <InputFieldBox type="password" handleChange={handlePasswordChange} id="Password" />
                 <div className={`h-1`} />
                 <BlockBtn title={"Login"} action={() => login({email, password})} />
-                <span className={`text-sm`}>Don't have an account? <Link to="/signup" className={`text-primary underline font-semibold`}>Sign up now!</Link></span>
+                <span className={`text-sm text-text`}>Don't have an account? <Link to="/signup" className={`text-primary underline font-semibold`}>Sign up now!</Link></span>
             </div>
             <div className={`hidden lg:flex justify-center items-center`}>
                 <img src="/Walk in the city-rafiki.png" alt="Hello" className={`w-100`}/>
