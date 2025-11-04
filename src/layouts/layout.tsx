@@ -3,9 +3,11 @@ import Navbar from "../components/navbar"
 
 function Layout() {
     return (
-        <div className={`max-w-[1920px] min-h-screen w-screen h-fit flex flex-col`}>
+        <div className={`max-w-[1920px] min-h-screen w-screen flex flex-col bg-bg`}>
             <Navbar />
-            <Outlet />
+            <div className={`min-h-fit grow px-6 lg:px-10`}>
+                <Outlet />
+            </div>
         </div>
     )
 }
