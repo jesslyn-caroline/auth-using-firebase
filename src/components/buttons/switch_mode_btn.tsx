@@ -22,7 +22,7 @@ function SwitchModeBtn() {
     }
 
     return (
-        <button className={`w-9 h-9 rounded-md flex items-center justify-center bg-primary text-white`} title="Switch Mode" onClick={toggleMode}>
+        <button className={`outline-none w-9 h-9 rounded-md flex items-center justify-center bg-primary text-white`} title="Switch Mode" onClick={toggleMode}>
             <i className={`${(mode == 'light' ? 'ri-moon-line' : 'ri-sun-line')} text-2xl `} />
         </button>
     )
