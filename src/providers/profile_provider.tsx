@@ -2,12 +2,10 @@ import { createContext, useState } from "react";
 
 export const ProfileContext = createContext<{
     email: string,
-    login: (email: string) => void,
-    logout: () => void
+    changeLoginStatus: (email: string) => void
 }>({
     email: "",
-    login: (email: string) => console.log(email),
-    logout:() => console.log("logout")
+    changeLoginStatus: (email: string) => { console.log(email) }
 });
 
 function ProfileProvider({ children } : { children: React.ReactNode }) {
@@ -17,18 +15,13 @@ function ProfileProvider({ children } : { children: React.ReactNode }) {
         return savedEmail || "";
     });
 
-    function login(email: string) {
+    function changeLoginStatus(email: string) {
         setEmail(email);
         localStorage.setItem("email", email);
     }
 
-    function logout() {
-        setEmail("");
-        localStorage.setItem("email", "");
-    }
-
     return (
-        <ProfileContext.Provider value={{email, login, logout}}>
+        <ProfileContext.Provider value={{email, changeLoginStatus}}>
             {children}
         </ProfileContext.Provider>
     )
