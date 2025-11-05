@@ -7,6 +7,8 @@ import { Link } from "react-router";
 
 function Signup() {
 
+    const { signUpwithEmailandPassword } = signup();
+
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [confirm, setConfirm] = useState<string>("");
@@ -23,7 +25,7 @@ function Signup() {
                 <InputFieldBox type="password" handleChange={handlePasswordChange} id="Password" />
                 <InputFieldBox type="password" handleChange={handleConfirmChange} id="Confirm Password" />
                 <div className={`h-1`} />
-                <BlockBtn title={"Sign up"} action={() => signup({email, password, confirm})} />
+                <BlockBtn title={"Sign up"} action={() => signUpwithEmailandPassword({email, password, confirm})} />
                 <span className={`text-sm text-text`}>Already have an account? <Link to="/login" className={`text-primary underline font-semibold`}>Login now!</Link></span>
             </div>
             <div className={`hidden lg:flex justify-center items-center`}>
